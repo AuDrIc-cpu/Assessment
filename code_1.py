@@ -1,2 +1,10 @@
 #list 
-activity_list = [("cultural immersersion",5,"easy    ",800),("Kayaking & pancakes",3,"moderate",400),("Mountain biking",4,"difficult")] 
+print("num    activities              difficulty             cost")    
+print("0    cultural immersion          easy                  800")
+print("1     Kayaking & pancakes       moderate               400")
+print("2       mountain bike           hard                   900")
+ 
+
+
+ #labels to the lists 
+ 
