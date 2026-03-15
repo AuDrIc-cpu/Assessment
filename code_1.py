@@ -6,5 +6,11 @@ print("2       mountain bike           hard                   900")
  
 
 
- #labels to the lists 
- 
+ #questions for the person who is taking the order thingy  
+input("What is your name? ") 
+int(input(f"What is your age? "))
+age = 0
+while age < 13 :
+    input("What number camp do you want to go to? ")
+if age >= 12 :
+  print("sorry you are not within the age limit to go.")
