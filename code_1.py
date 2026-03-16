@@ -1,4 +1,6 @@
-#list 
+
+
+#print 
 print("num    activities              difficulty             cost")    
 print("0    cultural immersion          easy                  800")
 print("1     Kayaking & pancakes       moderate               400")
@@ -14,6 +16,6 @@ while age < 13 :
     input("What number camp do you want to go to? ")
     input(f"What meal do you want?: standard, vegan or veganvegan ")
     input(f"Do you need shuttle bus? extra cost is $80 ")
-    if 
+    
 if age >= 12 :
   print("sorry you are not within the age limit to go.")
