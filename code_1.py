@@ -27,8 +27,8 @@ while camp_age == "" or camp_age.isdigit() == False :
 
 #no more question if you dont reach the eligibility 
 while int(camp_age) > age_min and int(camp_age) < age_max : 
-if age >= camp_leader_age :
-  print("You are also eligible to be a camp leader!")
+  if age >= camp_leader_age :
+    print("You are also eligible to be a camp leader!")
 if age < age_min :
     int(input("What number camp do you want to go to? "))
     input(f"What meal do you want?: standard, vegan or veganvegan ")
