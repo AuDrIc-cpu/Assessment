@@ -30,8 +30,8 @@ while camp_age == "" or camp_age.isdigit() == False:
   camp_age = input("What is your age? ")
 if camp_age == "" or camp_age.isdigit() == False:
      print("You need to enter your age.")
-  input(f"Do you need shuttle bus? extra cost is $80 ")
-elif  
+     input(f"Do you need shuttle bus? extra cost is $80 ")
+elif :  
 Shuttle != "yes":
   print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}.")
    
