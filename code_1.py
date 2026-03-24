@@ -39,5 +39,7 @@ Shuttle = input("Do you need a shuttle bus? Extra cost is $80: ")
 if Shuttle == "yes":
     print("Shuttle booked.")
     print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {meal}.")
+    print("Enjoy the camp.")
 elif Shuttle != "yes":
-    print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}.")
+    print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {meal}.")
+    print("Enjoy the camp.")
