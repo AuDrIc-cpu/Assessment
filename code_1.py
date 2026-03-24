@@ -1,6 +1,6 @@
 #list
 num = ["0","1","2"]
-food = ["standard","vegan","veganvegan"]
+food = ["standard","vegetarian","vegan"]
 activities = ["Cultural immersion","Kayaking & pancakes","Mountain bike"]
 difficulty = ["easy","moderate","hard"]
 cost = ["800","400","900"]
@@ -31,11 +31,13 @@ if int(camp_age) > camp_leader_age and int(camp_age) < age_max:  # FIX 1, 2, 3
     print(f"{camp_age} You are qualified to get camp leader!")
  
 camp_number = input("Enter camp number (0, 1, or 2): ")
+
+meal = input(f"What meal do you want?: standard, vegetarian, vegan ")
  
 Shuttle = input("Do you need a shuttle bus? Extra cost is $80: ")
  
 if Shuttle == "yes":
     print("Shuttle booked.")
-    print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}.")
+    print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {meal}.")
 elif Shuttle != "yes":
     print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}.")
