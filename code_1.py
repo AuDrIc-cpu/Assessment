@@ -10,6 +10,7 @@ age = 0
 camp_leader_age = 15
 Shuttle = ""
 camp_age = ""
+shuttle_cost = 80
  
 #print
 print("num    activities              difficulty             cost")    
@@ -27,19 +28,25 @@ while camp_age == "" or camp_age.isdigit() == False:
         print("You need to enter your age.")
  
 #eligibility for camp leader age
-if int(camp_age) > camp_leader_age and int(camp_age) < age_max:  # FIX 1, 2, 3
+if int(camp_age) > camp_leader_age and int(camp_age) < age_max:
     print(f"{camp_age} You are qualified to get camp leader!")
  
 camp_number = input("Enter camp number (0, 1, or 2): ")
-
 meal = input(f"What meal do you want?: standard, vegetarian, vegan ")
  
 Shuttle = input("Do you need a shuttle bus? Extra cost is $80: ")
  
+# cost calculate
+camp_cost = int(cost[int(camp_number)])
+total_without_shuttle = camp_cost
+total_with_shuttle = camp_cost + shuttle_cost
+ 
 if Shuttle == "yes":
     print("Shuttle booked.")
     print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {meal}.")
+    print(f"Total cost: {total_with_shuttle}")
     print("Enjoy the camp.")
 elif Shuttle != "yes":
     print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {meal}.")
+    print(f"Total cost (no shuttle): {total_without_shuttle}")
     print("Enjoy the camp.")
