@@ -44,9 +44,9 @@ total_with_shuttle = camp_cost + shuttle_cost
 if Shuttle == "yes":
     print("Shuttle booked.")
     print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {meal}.")
-    print(f"Total cost: {total_with_shuttle}")
+    print(f"Please confirm you want to go wit the cost of {total_with_shuttle}")
     print("Enjoy the camp.")
 elif Shuttle != "yes":
     print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {meal}.")
-    print(f"Total cost (no shuttle): {total_without_shuttle}")
+    print(f"Please confirm you want to go wit the cost of (no shuttle): {total_without_shuttle}")
     print("Enjoy the camp.")
