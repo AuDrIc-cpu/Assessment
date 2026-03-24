@@ -18,24 +18,23 @@ print("1     Kayaking & pancakes       moderate               400")
 print("2       Mountain bike           hard                   900")
  
 #questions for the person who is taking the order thingy  
-input("What is your name? ")
+name = input("What is your name? ")  
  
 #To make sure that they put a number on the camp age
-while camp_age == "" or camp_age.isdigit() == False :
-  camp_age = input("What is your age? ")
-  if camp_age == "" or camp_age.isdigit() == False: print("you need to enter your age.")
- 
-#Check age
 while camp_age == "" or camp_age.isdigit() == False:
-  camp_age = input("What is your age? ")
-if camp_age == "" or camp_age.isdigit() == False:
-     print("You need to enter your age.")
-     input(f"Do you need shuttle bus? extra cost is $80 ")
-elif :  
-Shuttle != "yes":
-  print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}.")
-   
+    camp_age = input("What is your age? ")
+    if camp_age == "" or camp_age.isdigit() == False:
+        print("You need to enter your age.")
 
+
+#eligibility for camp leader age 
+if (camp_age) > camp_leader_age and int(camp_age) < age_max print(f"{camp_age} You are qualified to get camp leader!")
  
+camp_number = input("Enter camp number (0, 1, or 2): ")  
  
+Shuttle = input("Do you need a shuttle bus? Extra cost is $80: ")
  
+if Shuttle == "yes":
+    print("Shuttle booked.")
+elif Shuttle != "yes":  
+    print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}.") # FIX 5: removed extra )"
