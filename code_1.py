@@ -11,6 +11,7 @@ camp_leader_age = 15
 Shuttle = ""
 camp_age = ""
 shuttle_cost = 80
+confirmation = ""
  
 #print
 print("num    activities              difficulty             cost")    
@@ -44,9 +45,12 @@ total_with_shuttle = camp_cost + shuttle_cost
 if Shuttle == "yes":
     print("Shuttle booked.")
     print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {meal}.")
-    print(f"Please confirm you want to go wit the cost of {total_with_shuttle}")
+    input(f"Please confirm you want to go with the cost of {total_with_shuttle} ")
     print("Enjoy the camp.")
 elif Shuttle != "yes":
     print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {meal}.")
-    print(f"Please confirm you want to go wit the cost of (no shuttle): {total_without_shuttle}")
+    input(f"Please confirm you want to go with the cost of: {total_without_shuttle} ")
+if confirmation == "yes":
     print("Enjoy the camp.")
+elif confirmation != "yes":
+  print(f"Have a good day.")
