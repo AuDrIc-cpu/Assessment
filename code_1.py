@@ -26,7 +26,7 @@ name = input("What is your name? ")
 while camp_age == "" or camp_age.isdigit() == False:
     camp_age = input("What is your age? ")
     if camp_age == "" or camp_age.isdigit() == False:
-        print("You need to enter your age.")
+        print("You have to be within the age group of 5-17")
  
 #eligibility for camp leader age
 if int(camp_age) > camp_leader_age and int(camp_age) < age_max:
@@ -51,6 +51,6 @@ elif Shuttle != "yes":
     print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {meal}.")
     input(f"Please confirm you want to go with the cost of: {total_without_shuttle} ")
 if confirmation == "yes":
-    print("Enjoy the camp.")
-elif confirmation != "yes":
+    print(f"Enjoy the camp.")
+elif confirmation != "yes"
   print(f"Have a good day.")
