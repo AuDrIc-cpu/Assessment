@@ -52,5 +52,5 @@ elif Shuttle != "yes":
     input(f"Please confirm you want to go with the cost of: {total_without_shuttle} ")
 if confirmation == "yes":
     print(f"Enjoy the camp.")
-elif confirmation != "yes"
+else:
   print(f"Have a good day.")
