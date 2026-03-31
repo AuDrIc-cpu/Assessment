@@ -51,6 +51,6 @@ elif Shuttle != "yes":
     print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {meal}.")
     input(f"Please confirm you want to go with the cost of: {total_without_shuttle} ")
 if confirmation == "yes":
-    print(f"Enjoy the camp.")
+  print(f"Enjoy the camp.")
 else:
   print(f"Have a good day.")
