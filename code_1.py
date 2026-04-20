@@ -1,25 +1,24 @@
 #list
 num = ["0","1","2"]
-food = ["standard","vegetarian","vegan"]
+food_options = ["standard","vegetarian","vegan"]
 activities = ["Cultural immersion","Kayaking & pancakes","Mountain bike"]
 difficulty = ["easy","moderate","hard"]
 cost = ["800","400","900"]
 age_min = 5
 age_max = 17
 age = 0
-camp_leader_age = 15
+camp_leader_age = 16
 Shuttle = ""
 camp_age = ""
 shuttle_cost = 80
 confirmation = ""
-
-
+ 
 #print
 print("num    activities              difficulty             cost")    
 print("0    Cultural immersion          easy                  800")
 print("1     Kayaking & pancakes       moderate               400")
 print("2       Mountain bike           hard                   900")
-
+ 
 while True:
     #questions
     name ="" 
@@ -27,59 +26,61 @@ while True:
         name = input("What is your name?")
         if name == "" or name.isalpha() == False:
             print("you need to enter your name without numbers and without symbols")
-
-                
     #To make sure that they put a number on the camp age
     camp_age = ""
+    too_young = False
     while camp_age == "" or camp_age.isdigit() == False:
         camp_age = input("What is your age? ")
         if camp_age == "" or camp_age.isdigit() == False:
             print("Please enter a valid age (numbers only).")
-        elif int(camp_age) < age_min or int(camp_age) > age_max:
-            print(f"Sorry, you are not able to come to the camp. You must be between {age_min} and {age_max}.")
-            
-
+        elif int(camp_age) < age_min:
+            print(f"Sorry, you are too young to come to the camp. You must be at least {age_min}.")
+            too_young = True
+            break  # exit the inner while loop
+        elif int(camp_age) > age_max:
+            print(f"Sorry, you are too old to come to the camp. You must be {age_max} or under.")
+            camp_age = ""  # reset so loop continues asking
+ 
+    if too_young:
+        continue  # restart the outer while True loop from the top
+ 
     #eligibility for camp leader age
-    if int(camp_age) > camp_leader_age and int(camp_age) < age_max:
-        print(f"{camp_age} You are qualified to get camp leader!")
-
+    if int(camp_age) >= camp_leader_age:
+        print(f"Age {camp_age}: You are qualified to be a camp leader!")
+ 
     camp_number = ""
     while camp_number not in ["0", "1", "2"]:
         camp_number = input("Enter camp number (0, 1, or 2): ")
         if camp_number not in ["0", "1", "2"]:
             print("Please enter a valid camp number: 0, 1, or 2.")
-
-
+ 
     #Camp meal 
     food = "" 
     while food not in ["standard", "vegetarian", "vegan"]:
-      food = input("What type of meal do you want? standard, vegetarian or vegan: ")
-      if food not in ["standard", "vegetarian", "vegan"]:
-          print("Pease enter a valid meal: standard, vegetarian, vegan.")
-      
-
+        food = input("What type of meal do you want? standard, vegetarian or vegan: ")
+        if food not in ["standard", "vegetarian", "vegan"]:
+            print("Please enter a valid meal: standard, vegetarian, vegan.")
     #shuttle check
-    while Shuttle.lower() not in  ["yes","no"]:
-         Shuttle = input("Do you want to use the shuttle bus for an extra cost of $80? (yes/no)")
-         if Shuttle.lower() not in ["yes","no"]:
-              print("please choose yes or no")
-    
+    Shuttle = ""
+    while Shuttle.lower() not in ["yes","no"]:
+        Shuttle = input("Do you want to use the shuttle bus for an extra cost of $80? (yes/no)")
+        if Shuttle.lower() not in ["yes","no"]:
+            print("please choose yes or no")
     #cost calculate
     camp_cost = int(cost[int(camp_number)])
     total_without_shuttle = camp_cost
     total_with_shuttle = camp_cost + shuttle_cost
-
+ 
     #confirmation
     if Shuttle == "yes":
         print("Shuttle booked.")
         print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {food}.")
         confirmation = input(f"Please confirm you want to go with the cost of {total_with_shuttle}: ")
-    elif Shuttle != "yes":
+    else:
         print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {food}.")
         confirmation = input(f"Please confirm you want to go with the cost of: {total_without_shuttle}: ")
-
+ 
     if confirmation == "yes":
         print("Enjoy the camp.")
-        
     else:
         print("Have a good day.")
