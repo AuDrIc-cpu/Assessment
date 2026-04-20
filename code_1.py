@@ -25,7 +25,7 @@ while True:
     name ="" 
     while name == "" or name.isalpha() == False:
         name = input("What is your name?")
-         if name == "" or name.isalpha() == False:
+        if name == "" or name.isalpha() == False:
             print("you need to enter your name without numbers and without symbols")
 
                 
@@ -50,7 +50,10 @@ while True:
             print("Please enter a valid camp number: 0, 1, or 2.")
 
     #shuttle check
-    while shuttle.lower() not in  ["yes","no"]
+    while Shuttle.lower() not in  ["yes","no"]:
+         Shuttle = input("Do you want to use the shuttle bus for an extra cost of $80? (yes/no)")
+         if Shuttle.lower() not in ["yes","no"]:
+              print("please choose yes or no")
     
 
     #cost calculate
