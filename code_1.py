@@ -54,7 +54,7 @@ while True:
     food = "" 
     while food not in ["standard", "vegetarian", "vegan"]:
       food = input("What type of meal do you want? standard, vegetarian or vegan: ")
-      if meal not in ["standard", "vegetarian", "vegan"]:
+      if food not in ["standard", "vegetarian", "vegan"]:
           print("Pease enter a valid meal: standard, vegetarian, vegan.")
       
 
