@@ -49,13 +49,21 @@ while True:
         if camp_number not in ["0", "1", "2"]:
             print("Please enter a valid camp number: 0, 1, or 2.")
 
+
+    #Camp meal 
+    food = "" 
+    while food not in ["standard", "vegetarian", "vegan"]:
+      food = input("What type of meal do you want? standard, vegetarian or vegan: ")
+      if meal not in ["standard", "vegetarian", "vegan"]:
+          print("Pease enter a valid meal: standard, vegetarian, vegan.")
+      
+
     #shuttle check
     while Shuttle.lower() not in  ["yes","no"]:
          Shuttle = input("Do you want to use the shuttle bus for an extra cost of $80? (yes/no)")
          if Shuttle.lower() not in ["yes","no"]:
               print("please choose yes or no")
     
-
     #cost calculate
     camp_cost = int(cost[int(camp_number)])
     total_without_shuttle = camp_cost
@@ -64,14 +72,14 @@ while True:
     #confirmation
     if Shuttle == "yes":
         print("Shuttle booked.")
-        print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {meal}.")
+        print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {food}.")
         confirmation = input(f"Please confirm you want to go with the cost of {total_with_shuttle}: ")
     elif Shuttle != "yes":
-        print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {meal}.")
+        print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {food}.")
         confirmation = input(f"Please confirm you want to go with the cost of: {total_without_shuttle}: ")
 
     if confirmation == "yes":
         print("Enjoy the camp.")
-    
+        
     else:
         print("Have a good day.")
