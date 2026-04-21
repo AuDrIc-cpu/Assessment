@@ -47,7 +47,6 @@ while True:
     #eligibility for camp leader age
     if int(camp_age) >= camp_leader_age:
         print(f"Age {camp_age}: You are qualified to be a camp leader!")
-    
     #Camp number
     camp_number = ""
     while camp_number not in ["0", "1", "2"]:
@@ -79,7 +78,9 @@ while True:
         confirmation = input(f"Please confirm you want to go with the cost of {total_with_shuttle}: ")
     else:
         print(f"Alright {name}, you picked camp {num[int(camp_number)]} which is {activities[int(camp_number)]}, difficulty {difficulty[int(camp_number)]}, your meal is {food}.")
-        confirmation.lower() not in ["yes","no"]:
         confirmation = input(f"Please confirm you want to go with the cost of: {total_without_shuttle}: ")
-        if confirmation.lower() not in ["yes","no"]:
-            print("please choose yes or no")
+ 
+    if confirmation == "yes":
+        print("Enjoy the camp.")
+    else:
+        print("Have a good day.")
